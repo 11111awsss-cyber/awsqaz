@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نموذج برلمان طلابي</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <h2>المديرية: لواءي الطيبة والوسطية</h2>
+    <h1>نموذج برلمان طلابي</h1>
+
+    <div class="form-group">
+      <label for="schoolName">اسم المدرسة:</label>
+      <input type="text" id="schoolName" placeholder="اكتب اسم المدرسة هنا">
+    </div>
+
+    <div class="form-group">
+      <label for="parentSatisfaction">ما مدى رضا أولياء الأمور عن مشاركة أبنائهم؟</label>
+      <select id="parentSatisfaction">
+        <option value="">--اختر--</option>
+        <option value="عادي جداً">١: عادي جداً</option>
+        <option value="عادي">٢: عادي</option>
+        <option value="متوسط">٣: متوسط</option>
+        <option value="ضعيف">٤: ضعيف</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="studentSatisfaction">ما مدى رضا الطلبة عن مشاركتهم؟</label>
+      <select id="studentSatisfaction">
+        <option value="">--اختر--</option>
+        <option value="عادي جداً">١: عادي جداً</option>
+        <option value="عادي">٢: عادي</option>
+        <option value="متوسط">٣: متوسط</option>
+        <option value="ضعيف">٤: ضعيف</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="forumSatisfaction">ما مدى رضاك عن ملتقى البرلمان الطلابي؟</label>
+      <select id="forumSatisfaction">
+        <option value="">--اختر--</option>
+        <option value="عالي جدا">١: عالي جدا</option>
+        <option value="عالي">٢: عالي</option>
+        <option value="متوسط">٣: متوسط</option>
+        <option value="ضعيف">٤: ضعيف</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="suggestions">اقتراحات وتحسينات</label>
+      <textarea id="suggestions" placeholder="اكتب اقتراحاتك هنا"></textarea>
+    </div>
+
+    <button id="submitBtn">إرسال النموذج</button>
+  </div>
+
+  <footer>by aws qasem abu zaitoon</footer>
+
+  <script src="db.js"></script>
+</body>
+</html>
