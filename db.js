@@ -15,6 +15,37 @@ document.getElementById('submitBtn').addEventListener('click', () => {
   submissions.push(submission);
   localStorage.setItem('submissions', JSON.stringify(submissions));
 
+
+
+window.loadData = async function(){
+
+  let out = document.getElementById("output");
+  out.innerHTML = "";
+
+  let data = await getDocs(collection(db,"forms"));
+
+  data.forEach(doc=>{
+    let d = doc.data();
+
+    out.innerHTML += `
+      <div class="card">
+        <b>🕒 الوقت:</b> ${d.time}<br><br>
+
+        <b>🏫 المدرسة:</b> ${d.school}<br>
+        <b>👤 النوع:</b> ${d.type}<br><br>
+
+        <b>📊 السؤال 1:</b> ${d.q1}<br>
+        <b>📊 السؤال 2:</b> ${d.q2}<br>
+        <b>📊 السؤال 3:</b> ${d.q3}<br><br>
+
+        <b>💡 اقتراح:</b> ${d.suggestions}
+      </div>
+    `;
+  });
+}
+
+
+  
   alert("تم إرسال النموذج بنجاح!");
   document.getElementById('schoolName').value = '';
   document.getElementById('parentSatisfaction').value = '';
